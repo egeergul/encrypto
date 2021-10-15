@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".caesarChipperActivity"
+    android:background="@color/darkGreen"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="60dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbEncrypt"
+                    android:layout_width="175dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/my_border"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="Encrypt"
+                    android:textColor="@color/lightGreen"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rbDecrypt"
+                    android:layout_width="175dp"
+                    android:layout_height="70dp"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="Decrypt"
+
+                    android:textColor="@color/lightGreen"></RadioButton>
+            </RadioGroup>
+
+            <TableRow
+                android:layout_height="100dp"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent">
+
+                <RadioGroup
+                    android:id="@+id/rgLang"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10px">
+                    <RadioButton
+                        android:id="@+id/rbENG"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="ENG"
+                        android:checked="true"
+                        android:background="@color/lightGreen"
+                        android:button="@null"></RadioButton>
+                    <RadioButton
+                    android:id="@+id/rbTR"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="TR"
+                    android:button="@null"></RadioButton>
+
+                </RadioGroup>
+
+                <EditText
+                    android:padding="5dp"
+                    android:id="@+id/etAlphabet"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="right"
+                    android:text="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                    android:textColor="@color/white"
+                    android:background="@drawable/my_border"
+                    android:layout_width="280dp"
+                    android:layout_height="match_parent"></EditText>
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/etInput"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="@color/white"
+                android:gravity="bottom"
+                android:hint="Your Text"
+                android:inputType="textMultiLine"
+                android:textColor="@color/lightGreen"
+                android:textColorHint="@color/lightGreen"></EditText>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="60dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="40dp"
+                    android:gravity="center"
+                    android:text="KEY TO SHIFT:"
+                    android:textColor="@color/lightGreen"></TextView>
+
+                <EditText
+                    android:id="@+id/etKey"
+                    android:layout_width="140dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/my_border"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="3"
+                    android:textColor="@color/lightGreen"></EditText>
+
+            </TableRow>
+
+            <Button
+                android:id="@+id/goBtn"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/my_border"
+                android:gravity="center"
+                android:text="GO"
+                android:textColor="@color/lightGreen"></Button>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/white"></View>
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:textColor="@color/lightGreen"
+                android:textIsSelectable="true"></TextView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
